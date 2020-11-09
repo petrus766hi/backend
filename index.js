@@ -31,7 +31,7 @@ app.use(pesanan)
 app.use(caraousell)
 
 
-// app.get('/', (req, res, next) => {
-//     res.send('Hello World')
-// })
+app.get('/', (req, res, next) => {
+    res.send('Hello World')
+})
 app.listen(3000)
