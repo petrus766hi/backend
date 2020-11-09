@@ -45,18 +45,20 @@ router.post('/api/alamats', Auth, function(req, res, next) {
       kabupaten : req.body.kabupaten,
       provinsi : req.body.provinsi,
       negara : req.body.negara,
-      Nomor_hp : req.body.Nomorhp,
-      Kode_pos : req.body.Kodepos,
+      Nomorhp : req.body.Nomorhp,
+      Kodepos : req.body.Kodepos,
       Id_user: id
     })
     .then((results)=>{
       res.status (201).json ({
+        status: true,
         msg: 'Success Create',
         data: results,
       });
     })
     .catch (err => {
       res.status (500).json ({
+        status: false,
         msg: 'Failed Create',
         detail: err,
       });
